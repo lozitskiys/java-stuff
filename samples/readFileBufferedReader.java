@@ -21,7 +21,7 @@ public class ReadFileBufferedReader {
         BufferedReader readerFile = new BufferedReader(new FileReader(fName));
 
         /**
-         Or, more general cate, because InputStreamReader supports different types of sources, not just files
+         Or, more general case, because InputStreamReader supports different types of sources, not just files
          BufferedReader readerFile = new BufferedReader(new InputStreamReader(new FileInputStream(fName)));
          **/
 
