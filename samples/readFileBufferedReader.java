@@ -1,28 +1,29 @@
 
-/* 
-1. Reads file name from stdin
-2. Reads file contents, using FileReader
-3. Sorts even numbers
-4. Prints them to stdout
-*/
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Solution {
+/**
+ * FileReader vs FileInputStream and stuff.
+ *
+ * 1. Reads file name from stdin
+ * 2. Reads file contents, using FileReader
+ * 3. Sorts even numbers
+ * 4. Prints them to stdout
+ */
+public class ReadFileBufferedReader {
     public static void main(String[] args) throws IOException {
         BufferedReader readerConsole = new BufferedReader(new InputStreamReader(System.in));
 
         String fName = readerConsole.readLine();
 
         BufferedReader readerFile = new BufferedReader(new FileReader(fName));
-		
-		/**
-		  Or, more general cate, because InputStreamReader supports different types of sources, not just files
-		  BufferedReader readerFile = new BufferedReader(new InputStreamReader(new FileInputStream(fName)));
-		**/
+
+        /**
+         Or, more general cate, because InputStreamReader supports different types of sources, not just files
+         BufferedReader readerFile = new BufferedReader(new InputStreamReader(new FileInputStream(fName)));
+         **/
 
         List<Integer> list = new ArrayList<>();
 
